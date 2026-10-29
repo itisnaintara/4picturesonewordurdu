@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ur">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>چار تصویریں ایک لفظ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section id="home" class="screen active">
+        <div class="top-bar">
+          <button class="icon-btn" id="homeShopBtn" type="button" aria-label="خریدیں">
+            <img alt="دکان" />
+          </button>
+          <div class="chip">
+            <img class="coin-icon" alt="سکہ" />
+            <span id="homeCoins">0</span>
+          </div>
+        </div>
+        <div class="home">
+          <img class="logo" id="logo" alt="لوگو" />
+          <h1>چار تصویریں ایک لفظ</h1>
+          <p>تصویر دیکھو، لفظ سمجھو، حروف بھرو</p>
+          <button class="play-btn" id="playBtn" type="button" aria-label="کھیلیں">
+            <img id="playIcon" alt="پلے" />
+          </button>
+          <div class="progress-note" id="progressNote">لوڈ ہو رہا ہے…</div>
+        </div>
+      </section>
+
+      <section id="game" class="screen">
+        <div class="top-bar">
+          <div class="level-pill" id="stageLabel">لیول 1</div>
+          <div class="hud">
+            <button class="icon-btn" id="backBtn" type="button" aria-label="گھر">
+              <img alt="گھر" />
+            </button>
+            <button class="icon-btn" id="hintBtn" type="button" aria-label="اشارہ">
+              <img alt="اشارہ" />
+            </button>
+            <button class="icon-btn" id="shopBtn" type="button" aria-label="خریدیں">
+              <img alt="دکان" />
+            </button>
+            <div class="chip">
+              <img class="coin-icon" alt="سکہ" />
+              <span id="gameCoins">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="photos" class="photos count-1"></div>
+        <div id="blanks" class="blanks"></div>
+        <div id="tray" class="tray"></div>
+      </section>
+    </div>
+
+    <div id="fx"></div>
+    <div class="win-toast" id="winToast"></div>
+
+    <div class="modal" id="shopModal">
+      <div class="sheet">
+        <img id="cardArt" alt="کارڈ" width="88" />
+        <h2>سکے خریدیں</h2>
+        <p>۱۰ روپے = ۱۰۰ سکے · اشارہ ایک حرف کھولتا ہے، ۱۰۰ سکے</p>
+        <div class="packs" id="packs"></div>
+        <form class="pay-form" onsubmit="return false">
+          <input id="cardNumber" inputmode="numeric" placeholder="Card number" autocomplete="off" />
+          <input id="cardExpiry" placeholder="MM/YY" autocomplete="off" />
+          <input id="cardCvc" inputmode="numeric" placeholder="CVC" autocomplete="off" />
+        </form>
+        <button class="primary" id="payBtn" type="button">ادائیگی</button>
+        <button class="ghost" id="closeShop" type="button">بند کریں</button>
+        <p class="demo-note">مقامی ڈیمو ادائیگی، اصلی کارڈ سے رقم نہیں کٹی گی۔</p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
