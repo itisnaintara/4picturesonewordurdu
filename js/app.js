@@ -435,7 +435,7 @@ function refreshHome() {
 
 async function boot() {
   wireUi();
-  const res = await fetch("/api/puzzles");
+  const res = await fetch("/game/api/puzzles");
   state.data = await res.json();
   refreshHome();
 }
